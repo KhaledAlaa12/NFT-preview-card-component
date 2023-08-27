@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(217, 54%, 11%);
+}
+.container {
+    background-color: hsl(216, 50%, 16%);
+    padding: 25px;
+    border-radius: 20px;
+    width: 320px;
+    height: 550px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .title {
+    color: white;
+    cursor: pointer;
+}
+.container .title:hover {
+    color: hsl(178, 100%, 50%);
+}
+.container .description {
+    color: hsl(178, 100%, 50%);
+    font-weight: 300;
+}
+.container .image {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.container .image::before {
+    content: url("images/icon-view.svg");
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    display: none;
+}
+.container .image::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 300px;
+    height: 270px;
+    background-color: white;
+    z-index: 100;
+    opacity: 0.5;
+    display: none;
+}
+.container .image:hover::after ,
+.container .image:hover::before {
+    display: block;
+}
+.container .image img {
+    max-width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.container .description2 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 20px;
+}
+.container .description2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .description2 img {
+    width: 10px;
+    margin-right: 5px;
+}
+.container .description2 .ethereum {
+    color: white;
+}
+.container .description2 .clock {
+    color: hsl(178, 100%, 50%);
+}
+.container .description2 .clock img {
+    width: 15px;
+}
+.container .info {
+    display: flex;
+    align-items: center;
+}
+.container .info img {
+    width: 30px;
+    margin-right: 10px;
+    border: 1px solid hsl(215, 51%, 70%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.container .info .Name {
+    color: white;
+    cursor: pointer;
+}
+.container .info .Name:hover {
+    color: hsl(178, 100%, 50%);
+}
+.container .info .Name span {
+    color: hsl(178, 100%, 50%);
+    margin-right: 5px;
+}
